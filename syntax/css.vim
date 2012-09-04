@@ -81,7 +81,7 @@ syn match cssBackgroundVal /\(closest\|farthest\)-\(side\|corner\)/ contained
 syn region cssFuncVal start="\(url\|calc\|min\|max\|counter\|cycle(\)" end=")" oneline contained contains=cssString,cssValueLength,cssValueInteger,cssValueNumber,cssValueAngle,cssValueTime,cssValueFrequency
 syn region cssFuncVal start="\(linear\|radial\|repeating-linear\|repeating-radial\)-gradient(" end=")" oneline contained contains=cssString,cssValueLength,cssValueInteger,cssValueNumber,cssValueAngle,cssValueTime,cssValueFrequency,cssVisualProp,cssColorVal
 
-syn match cssBorderProp /\(border-\(color\|style\|width\|radius\|spacing\|collapse\)\|border\)/ contained
+syn match cssBorderProp /\(border-\(color\|style\|width\|radius\)\|border\)/ contained
 syn match cssBorderProp /border-\(image-\(source\|slice\|width\|outset\|repeat\)\|image\)/ contained
 syn match cssBorderProp /border-\(\(top\|right\|bottom\|left\)-\(color\|style\|width\)\|\(top\|right\|bottom\|left\)\)/ contained
 syn match cssBorderProp /border-\(top\|bottom\)-\(left\|right\)-radius/ contained
@@ -145,7 +145,7 @@ syn match cssBoxProp /\(outline-\(color\|offset\|style\|width\)\|outline\)/ cont
 syn keyword cssBoxProp width height contained
 
 " Text
-syn match cssTextProp /text-\(align-last\|align\|decoration\|emphasis\|height\|indent\|justify\|outline\|shadow\|transform\|wrap\|overflow\)/ contained
+syn match cssTextProp /text-\(align-last\|align\|decoration\|emphasis\|height\|indent\|justify\|outline\|shadow\|transform\|wrap\|overflow\)\|text/ contained
 syn match cssTextProp /\(line-stacking-\(ruby\|shift\|strategy\)\|line-stacking\|line-height\)/ contained
 syn match cssTextProp /vertical-align/ contained
 syn match cssTextProp /letter-spacing/ contained
@@ -180,6 +180,8 @@ syn match cssVisualVal /table-\(row-group\|header-group\|footer-group\|row\|colu
 syn match cssVisualVal /\<ruby\>-\(base-group\|text-group\|base\|text\)/  contained
 syn keyword cssVisualVal static relative absolute fixed contained
 syn keyword cssVisualVal ltr rtl embed bidi-override pre nowrap contained
+syn keyword cssVisualVal crosshair help move pointer progress wait contained
+syn keyword cssVisualVal e-resize n-resize ne-resize nw-resize s-resize se-resize sw-resize w-resize contained
 
 " Table
 syn match cssTableProp /border-\(collapse\|spacing\)/ contained
@@ -267,6 +269,7 @@ if version >= 508 || !exists("did_css_syn_inits")
   HiLink cssTagName Statement
   HiLink cssSelector Function
   HiLink cssBackgroundProp StorageClass
+  HiLink cssTableProp StorageClass
   HiLink cssBorderProp StorageClass
   HiLink cssFontProp StorageClass
   HiLink cssColorProp StorageClass
