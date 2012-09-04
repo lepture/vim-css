@@ -293,6 +293,7 @@ if version >= 508 || !exists("did_css_syn_inits")
   HiLink cssBorderVal Type
   HiLink cssBackgroundVal Type
   HiLink cssFuncVal Function
+  HiLink cssAdvancedVal Function
 
   HiLink cssValueLength Number
   HiLink cssValueInteger Number
