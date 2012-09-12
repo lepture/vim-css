@@ -131,8 +131,8 @@ syn keyword cssColorVal red rosybrown royalblue saddlebrown salmon sandybrown co
 syn keyword cssColorVal seagreen seashell sienna silver skyblue slateblue contained
 syn keyword cssColorVal slategray slategrey snow springgreen steelblue tan contained
 syn keyword cssColorVal teal thistle tomato turquoise violet wheat contained
-syn keyword cssColorVal white whitesmoke yellow yellowgreen contained
-syn match cssColorVal /<white>/ contained
+syn keyword cssColorVal whitesmoke yellow yellowgreen contained
+syn match cssColorVal "\<white\>" contained
 syn keyword cssColorProp color opaticy contained
 syn match cssColorProp /color-profile/ contained
 
