@@ -143,6 +143,7 @@ syn match cssBoxProp /box-\(align\|decoration-break\|direction\|flex-group\|flex
 syn match cssBoxProp /box-\(ordinal-group\|orient\|pack\|shadow\|sizing\)/ contained
 syn match cssBoxProp /\(outline-\(color\|offset\|style\|width\)\|outline\)/ contained
 syn keyword cssBoxProp width height contained
+syn match cssBoxVal "\<border-box\>" contained
 
 " Text
 syn match cssTextProp /text-\(align-last\|align\|decoration\|emphasis\|height\|indent\|justify\|outline\|shadow\|transform\|wrap\|overflow\)\|text/ contained
@@ -211,9 +212,9 @@ syn match cssPseudo /::\(first-\(line\|letter\)\|before\|after\|selection\)/
 " CSS3 Advanced http://meiert.com/en/indices/css-properties/
 syn keyword cssAdvancedProp appearance azimuth binding bleed columns crop hyphens icon
 syn keyword cssAdvancedProp phonemes resize richness size volumne
-syn match cssAdvancedProp /\(animation-\(delay\|direction\|duration\|name\|iteration-count\|play-state\|timing-function\)\|animation\)/
+syn match cssAdvancedProp /\(animation-\(delay\|direction\|duration\|name\|iteration-count\|play-state\|timing-function\|fill-mode\)\|animation\)/
 syn match cssAdvancedProp /alignment-\(adjust\|baseline\)/
-syn match cssAdvancedProp /\(backface-visibility\baseline-shift\)/
+syn match cssAdvancedProp /\(backface-visibility\|baseline-shift\)/
 syn match cssAdvancedProp /bookmark-\(label\|level\|state\|target\)/
 syn match cssAdvancedProp /column-\(count\|fill\|gap\|rule-\(color\|style\|width\)\|rule\|span\|width\)/
 syn match cssAdvancedProp /\(cue-\(after\|before\)\|cue\)/
@@ -243,7 +244,11 @@ syn match cssAdvancedProp /\(transform-\(origin\|style\)\|transform\)/
 syn match cssAdvancedProp /\(transition-\(delay\|duration\|property\|timing-function\)\|transition\)/
 syn match cssAdvancedProp /voice-\(balance\|duration\|family\|pitch-range\|pitch\|rate\|stress\|volume\)/
 
-syn match cssAdvancedVal /\(ease-\(in\|out\|in-out\)\|ease\)/ contained
+syn match cssAdvancedVal "\<ease-\(in-out\|in\|out\)\>" contained
+syn match cssAdvancedVal "\<scale\|ease\>" contained
+syn match cssAdvancedVal "\<translateX\|translateY\|translateZ\|translate\>" contained
+syn match cssAdvancedVal "\<rotateX\|rotateY\|rotateZ\|rotate\>" contained
+syn match cssAdvancedVal "\<skewX\|skewY\|skewZ\|skew\>" contained
 
 " CSS3 Advanced value 
 "syn match cssAdvancedVal 
@@ -290,6 +295,7 @@ if version >= 508 || !exists("did_css_syn_inits")
   HiLink cssListVal Type
   HiLink cssTextVal Type
   HiLink cssVisualVal Type
+  HiLink cssBoxVal Type
   HiLink cssBorderVal Type
   HiLink cssBackgroundVal Type
   HiLink cssFuncVal Function
