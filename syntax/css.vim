@@ -1,9 +1,9 @@
 " Vim syntax file
-" Language:	CSS3
-" Maintainer:	Hsiaoming Yang <lepture@me.com>
-" URL: http://lepture.me/work/css3/
-" Created:	Dec 14, 2011
-" Modified:	Sep 4, 2012
+" Language: CSS3
+" Maintainer: Hsiaoming Yang <me@lepture.com>
+" URL: https://github.com/lepture/vim-css
+" Created: Dec 14, 2011
+" Modified: Sep 4, 2013
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
