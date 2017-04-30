@@ -157,7 +157,7 @@ syn match cssTextVal "\<break-word\>" contained
 syn match cssTextVal "\<break-all\>" contained
 syn match cssTextVal "\<line-through\>" contained
 syn match cssTextVal /text-\(top\|bottom\)/ contained
-syn keyword cssTextVal uppercase lowercase ellipsis middle contained
+syn keyword cssTextVal uppercase lowercase ellipsis middle baseline sub super top bottom contained
 
 " List
 syn match cssListProp /\(list-style-\(type\|image\|position\)\|list-style\)/ contained
@@ -181,7 +181,7 @@ syn match cssVisualVal /table-\(row-group\|header-group\|footer-group\|row\|colu
 syn match cssVisualVal /\<ruby\>-\(base-group\|text-group\|base\|text\)/  contained
 syn keyword cssVisualVal static relative absolute fixed contained
 syn keyword cssVisualVal ltr rtl embed bidi-override pre nowrap contained
-syn keyword cssVisualVal crosshair help move pointer progress wait contained
+syn keyword cssVisualVal crosshair help move pointer default progress wait contained
 syn keyword cssVisualVal e-resize n-resize ne-resize nw-resize s-resize se-resize sw-resize w-resize contained
 
 " Table
